@@ -18,7 +18,9 @@ p {
 }
 
 .main-content {
+	margin: 100px 0;
 	overflow: hidden;
+	float: center !important;
 }
 
 .bg-img {
@@ -80,6 +82,9 @@ p {
 	  float: right;
 	  display: block;
 	}
+	.text-block {
+		width: 100% !important;
+	}
   }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -103,12 +108,17 @@ p {
 
 .text-block {
 	display: inline-block;
-	margin: 1.5%;
+	margin: 0;
 	float: left;
+	width: 50%;
+	height: auto;
 }
 
-.img-block {
-	display: inline-block;
+.main-content .text-block {
+	width: 90%;
+}
+.introimg {
+	display: block;
 }
 
 .img-block img {
@@ -119,22 +129,32 @@ p {
 .footer {
 	margin-top: 5rem;
 	height: 250px;
-	width: auto;
 	background-color: #000;
 	color: #FFF;
-	overflow: hidden;
-}
-
-.footer .text-block {
-	width: 30%;
 }
 
 .footer p {
-	font-size: .5em;
+	left: 50% !important;
+	font-size: 32px;
 }
 
 .footer a {
-	font-size: 48px;
+	font-size: 32px;
 	color: #FFF;
 	padding: 10px;
 }
+
+@media (min-width: 992px) { 
+	.introimg {
+		width: 100% !important;
+	}
+}
+
+@media (min-width: 1200px) { 
+	.introimg {
+		width: 50% !important;
+	}
+	.main-content .text-block {
+		width: 50%;
+	}
+ }
